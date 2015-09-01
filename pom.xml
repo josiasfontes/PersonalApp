@@ -38,7 +38,7 @@
 		</dependency>
 
 
-<!-- dependencias parar erros -->
+		<!-- dependencias parar erros -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
