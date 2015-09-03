@@ -32,7 +32,7 @@
 			<c:forEach items="${exercicios}" var="exercicio">
 				<tr>
 					<td>${exercicio.idExercicio}</td>
-					<td><input type="checkbox" value="${exercicio.idExercicio}"></td>
+					<td><input type="checkbox" name="exercicios" value="${exercicio.idExercicio}"></td>
 					<td>${exercicio.nome}</td>
 				</tr>
 			</c:forEach>

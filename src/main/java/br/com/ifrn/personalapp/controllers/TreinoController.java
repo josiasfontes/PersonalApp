@@ -27,7 +27,8 @@ public class TreinoController {
 
 	@RequestMapping(value = "treino/criar", method = RequestMethod.POST)
 	public ModelAndView criarTreino(@ModelAttribute Treino treino) {
-		if (treino.getIdTreino() == null) {																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
+		if (treino.getIdTreino() == null) {		
+			System.out.println("Treino: "+ treino.getExercicios().size());
 			treinoService.salvarTreino(treino);
 		}else{
 			treinoService.atualizarTreino(treino);

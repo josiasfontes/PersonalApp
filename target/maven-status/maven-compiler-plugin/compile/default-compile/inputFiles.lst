@@ -17,7 +17,6 @@
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/service/TreinoService.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/TreinoController.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/models/Academia.java
-/home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/service/TreinoHasExercicioService.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/service/PessoaService.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/MedidasDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/AcademiaController.java
@@ -26,7 +25,6 @@
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/MensalidadeDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/MedidasController.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/ExercicioController.java
-/home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/TreinoHasExercicioDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/AcademiaDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/EnderecoDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/service/MensalidadeService.java
