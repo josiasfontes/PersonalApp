@@ -17,6 +17,7 @@
 			<th>Id Endereco</th>
 			<th>Status Mensalidade</th>
 			<th>Valor Mensalidade</th>
+			<th>Gerenciar Aluno</th>
 			<th>Editar</th>
 			<th>Remover</th>
 		</tr>
@@ -36,13 +37,15 @@
 				<td>${pessoa.endereco.idEndereco}</td>
 				<td>${pessoa.mensalidade.status}</td>
 				<td>${pessoa.mensalidade.valor}</td>
-
+				<td><a
+					href="${pageContext.request.contextPath}/treino/criar/">
+						<i class="glyphicon glyphicon-edit"></i> Gerenciar Aluno
+				</a></td>
 				<td><a
 					href="${pageContext.request.contextPath}/pessoa/editar/${pessoa.idPessoa}">
 						<i class="glyphicon glyphicon-edit"></i> Editar
 				</a></td>
-				<td> 
-				<a
+				<td><a
 					href="${pageContext.request.contextPath}/pessoa/deletar/${pessoa.idPessoa}">
 						<i class="glyphicon glyphicon-trash"></i> Remover
 				</a></td>

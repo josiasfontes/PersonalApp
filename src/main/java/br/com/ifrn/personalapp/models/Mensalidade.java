@@ -16,18 +16,18 @@ public class Mensalidade {
 	@Column(name="ID_MENSALIDADE")
 	public Long idMensalidade;
 	
-	@Column(name="VALOR")
+	@Column(name="VALOR", nullable = false)
 	public double valor;
 	
 	@Column(name="ULTIMO_PAGAMENTO")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date ultimoPagamento;  
 
 	@Column(name="DATA_VENCIMENTO")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date dataVencimento;
 	
-	@Column(name="STATUS")
+	@Column(name="STATUS", nullable = false)
 	public String status;
 	
 	public Mensalidade(){

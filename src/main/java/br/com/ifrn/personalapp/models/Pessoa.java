@@ -20,26 +20,29 @@ public class Pessoa {
 	@Column(name = "ID_PESSOA")
 	public Long idPessoa;
 
-	@Column(name = "NOME")
+	@Column(name = "NOME", nullable = false)
 	public String nome;
 
-	@Column(name = "CPF")
+	@Column(name = "CPF", nullable = false)
 	public String cpf;
 
-	@Column(name = "SEXO")
+	@Column(name = "SEXO", nullable = false)
 	public String sexo;
 
-	@Column(name = "IDADE")
+	@Column(name = "IDADE", nullable = false)
 	public int idade;
 
-	@Column(name = "EMAIL")
+	@Column(name = "EMAIL", nullable = false)
 	public String email;
+	
+	@Column(name = "SENHA", nullable = false)
+	public String senha;
 
-	@Column(name = "TELEFONE")
+	@Column(name = "TELEFONE", nullable = false)
 	public int telefone;
 	
 	@Column(name="DATA")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date dataCadastro;
 
 	@ManyToOne
@@ -115,6 +118,14 @@ public class Pessoa {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 	public int getTelefone() {

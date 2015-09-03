@@ -3,7 +3,7 @@
 <html>
 <head></head>
 <body>
-
+	<h1>Cadastrar Pessoa</h1>
 	<form:form modelAttribute="pessoa" method="post" action="/pessoa/criar">
 
 		<form:label path="nome">Nome</form:label>
@@ -25,6 +25,10 @@
 
 		<form:label path="email">Email</form:label>
 		<form:input path="email" value="${pessoa.email}" />
+		<br />
+		
+		<form:label path="senha">Senha</form:label>
+		<form:input path="senha" value="${pessoa.senha}" />
 		<br />
 
 		<form:label path="telefone">Telefone</form:label>

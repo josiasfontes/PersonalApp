@@ -13,25 +13,25 @@ public class Endereco {
 	@Column(name="ID_ENDERECO")
 	private Long idEndereco;
 	
-	@Column(name="CEP")
+	@Column(name="CEP", nullable = false)
 	private String cep;
 	
-	@Column(name="LOGRADOURO")
+	@Column(name="LOGRADOURO", nullable = false)
 	private String logradouro;
 	
-	@Column(name="BAIRRO")
+	@Column(name="BAIRRO", nullable = false)
 	public String bairro;
 	
-	@Column(name="NUMERO")
+	@Column(name="NUMERO", nullable = false)
 	private int numero;
 	
-	@Column(name="COMPLEMENTO")
+	@Column(name="COMPLEMENTO", nullable = false)
 	private String complemento;
 	
-	@Column(name="CIDADE")
+	@Column(name="CIDADE", nullable = false)
 	private String cidade;
 	
-	@Column(name="ESTADO")
+	@Column(name="ESTADO", nullable = false)
 	private String estado;
 
 	public Long getIdEndereco() {

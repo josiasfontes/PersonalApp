@@ -3,7 +3,7 @@
 <html>
 <head></head>
 <body>
-
+	<h1>Cadastrar Academia</h1>
 	<form:form modelAttribute="academia" method="post" action="/academia/criar">
 
 		<form:label path="razaosocial">Razão social</form:label>

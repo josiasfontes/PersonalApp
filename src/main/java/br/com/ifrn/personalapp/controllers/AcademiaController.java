@@ -53,6 +53,11 @@ public class AcademiaController {
 		return new ModelAndView("academia/form", "academia", academiaService.getById(id));
 	}
 	
+	@RequestMapping(value = "academia/listar", method = RequestMethod.GET) 
+	public ModelAndView listar() {
+		return new ModelAndView("academia/listar", "academias", academiaService.academias());
+	}
+		
 	// API Rest
 	@RequestMapping(value = "api/academias", method = RequestMethod.GET)
 	public List<Academia> academiasApi() {
@@ -64,10 +69,7 @@ public class AcademiaController {
 		return academiaService.getById(id);
 	}
 	
-	@RequestMapping(value = "academia/listar", method = RequestMethod.GET) 
-	public ModelAndView listar() {
-		return new ModelAndView("academia/listar", "academias", academiaService.academias());
-	}
+	
 	
 	
 }

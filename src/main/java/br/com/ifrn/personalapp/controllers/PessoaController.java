@@ -32,7 +32,6 @@ public class PessoaController {
 		} else {
 			pessoaService.atualizarPessoa(pessoa);
 		}
-		//return new ModelAndView("destaque/login");
 		return new ModelAndView("pessoa/listar","pessoas", pessoaService.pessoas());
 	}
 	

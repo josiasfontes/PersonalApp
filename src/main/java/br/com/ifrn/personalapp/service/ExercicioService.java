@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import br.com.ifrn.personalapp.dao.ExercicioDAO;
 import br.com.ifrn.personalapp.models.Exercicio;
 
+
 @Service
 public class ExercicioService {
 
@@ -25,14 +26,14 @@ public class ExercicioService {
 	public Exercicio getById(Long id) {
 		return exercicioDAO.findOne(id);
 	}
-	
-	public Exercicio getByNome(String nome) {
-		return exercicioDAO.findByNome(nome);
-	}
-	
+
 	public Exercicio salvarExercicio(Exercicio exercicio) {
 		return exercicioDAO.save(exercicio);
-	}		
+	}	
+	
+	public void removerExercicio(Long id) {
+		exercicioDAO.delete(id);
+	}
 	
 	public Exercicio atualizarExercicio(Exercicio exercicio) {
 		return entityManager.merge(exercicio);

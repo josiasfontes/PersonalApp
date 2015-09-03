@@ -16,8 +16,7 @@ import br.com.ifrn.personalapp.service.ExercicioService;
 @RestController
 public class ExercicioController {
 
-	@Autowired
-	ExercicioService exercicioService;
+	@Autowired ExercicioService exercicioService;
 
 	@RequestMapping(value = "exercicio/criar", method = RequestMethod.GET)
 	public ModelAndView formCriar(@ModelAttribute Exercicio exercicio) {
@@ -26,13 +25,27 @@ public class ExercicioController {
 
 	@RequestMapping(value = "exercicio/criar", method = RequestMethod.POST)
 	public ModelAndView criarExercicio(@ModelAttribute Exercicio exercicio) {
-		if (exercicio.getIdExercicio() == null) {
+		if (exercicio.getIdExercicio() == null) {																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								
 			exercicioService.salvarExercicio(exercicio);
-		} else {
+		}else{
 			exercicioService.atualizarExercicio(exercicio);
 		}
-		//return new ModelAndView("destaque/login");
-		return new ModelAndView("exercicio/form");
+		return new ModelAndView("exercicio/listar","exercicios", exercicioService.exercicios());
+	}
+	
+	//editar
+	@RequestMapping(value = "exercicio/atualizar/{id}")
+	public ModelAndView updateExercicio(@PathVariable Exercicio exercicio, @PathVariable Long id) {
+		exercicio.setIdExercicio(id);
+		exercicioService.atualizarExercicio(exercicio);
+		return new ModelAndView("exercicio/listar","exercicios", exercicioService.exercicios());
+	}
+	
+	//deletar
+	@RequestMapping(value = "exercicio/deletar/{id}")
+	public ModelAndView deletarExercicio(@PathVariable Long id) {
+		exercicioService.removerExercicio(id);
+		return new ModelAndView("exercicio/listar","exercicios", exercicioService.exercicios());
 	}
 	
 	@RequestMapping(value = "exercicio/editar/{id}", method=RequestMethod.GET)
@@ -57,5 +70,4 @@ public class ExercicioController {
 	}
 	
 	
-
 }

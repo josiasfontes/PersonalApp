@@ -20,24 +20,29 @@ public class Academia {
 	@Column(name="ID_ACADEMIA")
 	private Long idAcademia;
 	
-	@Column(name="RAZAO_SOCIAL")
+	@Column(name="RAZAO_SOCIAL", nullable = false)
 	private String razaosocial;
 
 	@Column(name="DATA")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	private Date dataCadastro;
 	
-	@Column(name="CNPJ")
+	@Column(name="CNPJ", nullable = false)
 	private int cnpj;
 	
-	@Column(name="NOME_RESPONSAVEL")
+	@Column(name="NOME_RESPONSAVEL", nullable = false)
 	private String nomeresponsavel;
 	
-	@Column(name="LOGIN")
+	@Column(name="LOGIN", nullable = false)
 	private String login;
 	
-	@Column(name="SENHA")
+	@Column(name="SENHA", nullable = false)
 	private String senha;
+	
+	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name="ENDERECO_ID_ENDERECO")
+	private Endereco endereco;
+
 	
 	public Academia() {
 		endereco = new Endereco();
@@ -100,29 +105,10 @@ public class Academia {
 		this.dataCadastro = dataCadastro;
 	}
 
-	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name="ENDERECO_ID_ENDERECO")
-	private Endereco endereco;
-	
-	/*public Academia() {
-		endereco = new Endereco();
-	}*/
-
-	
 	public Endereco getEndereco() {
 		return endereco;
 	}
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	/*
-	public Date getDataCadastro() {
-		return dataCadastro;
-	}
-
-	public void setDataCadastro(Date dataCadastro) {
-		this.dataCadastro = dataCadastro;
-	}*/
-
 }
