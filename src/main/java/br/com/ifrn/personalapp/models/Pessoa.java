@@ -19,6 +19,9 @@ public class Pessoa {
 	@Id	@GeneratedValue
 	@Column(name = "ID_PESSOA")
 	public Long idPessoa;
+	
+	@Column(name = "ACTIVE")
+	private boolean active = true;
 
 	@Column(name = "NOME", nullable = false)
 	public String nome;
@@ -78,6 +81,14 @@ public class Pessoa {
 
 	public void setIdPessoa(Long idPessoa) {
 		this.idPessoa = idPessoa;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	public String getNome() {

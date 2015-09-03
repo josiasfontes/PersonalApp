@@ -45,10 +45,15 @@
 					href="${pageContext.request.contextPath}/pessoa/editar/${pessoa.idPessoa}">
 						<i class="glyphicon glyphicon-edit"></i> Editar
 				</a></td>
-				<td><a
-					href="${pageContext.request.contextPath}/pessoa/deletar/${pessoa.idPessoa}">
-						<i class="glyphicon glyphicon-trash"></i> Remover
-				</a></td>
+				<td>
+					<form  method="post" action="/pessoa/ativar/">
+						
+						<input type="hidden" name="ativo" value="false" />
+						<input type="hidden" name="id" value="${pessoa.idPessoa}" />
+						<input type="submit" value="Remover" />
+					</form>
+						
+				</td>
 			</tr>
 		</c:forEach>
 	</tbody>

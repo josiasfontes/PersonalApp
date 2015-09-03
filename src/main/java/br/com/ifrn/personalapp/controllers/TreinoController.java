@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -36,6 +37,15 @@ public class TreinoController {
 		return new ModelAndView("treino/listar","treinos", treinoService.treinos());
 	}
 	
+	@RequestMapping(value = "treino/ativar", method = RequestMethod.POST)
+	public ModelAndView ativarTreino(@RequestParam("id") Long id, @RequestParam("ativo") boolean ativo) {
+		
+		treinoService.ativarOuDesativar(id, ativo);
+	
+		return new ModelAndView("treino/listar", "treinos",
+				treinoService.treinos());
+	}
+
 	//editar
 	@RequestMapping(value = "treino/atualizar/{id}")
 	public ModelAndView updateTreino(@PathVariable Treino treino, @PathVariable Long id) {
@@ -56,6 +66,18 @@ public class TreinoController {
 		return new ModelAndView("treino/form", "treino", treinoService.getById(id));
 	}
 	
+	@RequestMapping(value = "treino/listar", method = RequestMethod.GET) 
+	public ModelAndView listar() {
+		return new ModelAndView("treino/listar", "treinos", 
+				treinoService.treinosAtivos());
+	}
+	
+	@RequestMapping(value = "treino/listartudo", method = RequestMethod.GET)
+	public ModelAndView listarTudo() {
+		return new ModelAndView("treino/listar", "treinos",
+				treinoService.treinos());
+	}
+	
 	// API Rest
 	@RequestMapping(value = "api/treinos", method = RequestMethod.GET)
 	public List<Treino> treinosApi() {
@@ -67,8 +89,5 @@ public class TreinoController {
 		return treinoService.getById(id);
 	}
 	
-	@RequestMapping(value = "treino/listar", method = RequestMethod.GET) 
-	public ModelAndView listar() {
-		return new ModelAndView("treino/listar", "treinos", treinoService.treinos());
-	}
+	
 }

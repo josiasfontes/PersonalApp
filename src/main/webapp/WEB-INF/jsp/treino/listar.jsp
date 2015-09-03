@@ -29,10 +29,14 @@
 					href="${pageContext.request.contextPath}/treino/editar/${treino.idTreino}">
 						<i class="glyphicon glyphicon-edit"></i> Editar
 				</a></td>
-				<td><a
-					href="${pageContext.request.contextPath}/treino/deletar/${treino.idTreino}">
-						<i class="glyphicon glyphicon-trash"></i> Remover
-				</a></td>
+				<td>
+					<form  method="post" action="/treino/ativar/">
+						
+						<input type="hidden" name="ativo" value="false" />
+						<input type="hidden" name="id" value="${treino.idTreino}" />
+						<input type="submit" value="Remover" />
+					</form>
+				</td>
 			</tr>
 		</c:forEach>
 	</tbody>

@@ -38,7 +38,17 @@ public class PessoaService {
 		return entityManager.merge(pessoa);
 	}
 	
+	public void ativarOuDesativar(Long id, boolean ativo) {
+		Pessoa p = pessoaDAO.getOne(id);
+		p.setActive(ativo);
+		pessoaDAO.save(p);
+	}
+	
 	public List<Pessoa> pessoas() {
 		return pessoaDAO.findAll();
+	}
+	
+	public List<Pessoa> pessoasAtivas() {
+		return pessoaDAO.findByActive(true);
 	}
 }

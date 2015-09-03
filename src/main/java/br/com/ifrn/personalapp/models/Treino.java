@@ -25,6 +25,9 @@ public class Treino {
 	@Column(name="ID_TREINO")
 	private Long idTreino;
 	
+	@Column(name = "ACTIVE")
+	private boolean active = true;
+	
 	@Column(name="NOME")
 	private String nome;
 
@@ -64,6 +67,14 @@ public class Treino {
 		this.idTreino = idTreino;
 	}
 	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	public String getNome() {
 		return nome;
 	}

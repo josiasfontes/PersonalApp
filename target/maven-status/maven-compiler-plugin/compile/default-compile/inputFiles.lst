@@ -13,6 +13,7 @@
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/EnderecoController.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/Application.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/config/WebMvcConfig.java
+/home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/ServiceController.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/dao/TreinoDAO.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/service/TreinoService.java
 /home/josias/Documentos/PersonalApp/src/main/java/br/com/ifrn/personalapp/controllers/TreinoController.java

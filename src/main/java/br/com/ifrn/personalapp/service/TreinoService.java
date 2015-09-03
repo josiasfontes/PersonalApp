@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.ifrn.personalapp.dao.TreinoDAO;
+import br.com.ifrn.personalapp.models.Pessoa;
 import br.com.ifrn.personalapp.models.Treino;
 
 
@@ -39,7 +40,17 @@ public class TreinoService {
 		return entityManager.merge(treino);
 	}
 	
+	public void ativarOuDesativar(Long id, boolean ativo) {
+		Treino t = treinoDAO.getOne(id);
+		t.setActive(ativo);
+		treinoDAO.save(t);
+	}
+	
 	public List<Treino> treinos() {
 		return treinoDAO.findAll();
+	}
+	
+	public List<Treino> treinosAtivos() {
+		return treinoDAO.findByActive(true);
 	}
 }
