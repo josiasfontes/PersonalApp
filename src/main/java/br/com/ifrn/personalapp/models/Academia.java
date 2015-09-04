@@ -39,7 +39,7 @@ public class Academia {
 	@Column(name="SENHA", nullable = false)
 	private String senha;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name="ENDERECO_ID_ENDERECO")
 	private Endereco endereco;
 

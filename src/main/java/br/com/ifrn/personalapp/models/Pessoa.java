@@ -48,15 +48,15 @@ public class Pessoa {
 	@Temporal(TemporalType.DATE)
 	private Date dataCadastro;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ACADEMIA_ID_ACADEMIA")
 	private Academia academia;
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "ENDERECO_ID_ENDERECO")
 	private Endereco endereco;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name="MENSALIDADE_ID_MENSALIDADE")
 	private Mensalidade mensalidade;
 	
