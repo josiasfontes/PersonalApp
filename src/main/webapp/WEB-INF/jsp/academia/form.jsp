@@ -84,23 +84,23 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
+          <!-- <div class="user-panel">
             <div class="pull-left image">
               <img src="/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
               <p>Nome do Usuário</p>
             </div>
-          </div>
+          </div> -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MENU</li>
+            <li class="header">CADASTRE AQUI SUA ACADEMIA</li>
             <li class="active treeview">
               <a href="index.xhtml">
-                <i class="fa fa-fw fa-home"></i> <span>Home</span>
+                <i class="fa fa-fw fa-home"></i> <span>Cadastrar Academia</span>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="/pessoa/listar">
                 <i class="fa fa-fw fa-user-plus"></i>
                  <span >Aluno</span>
@@ -111,7 +111,7 @@
                 <i class="fa fa-fw fa-money"></i>
                 <span>Mensalidades</span>
               </a>
-            </li>
+            </li> -->
          </ul>
          </section>
         <!-- /.sidebar -->

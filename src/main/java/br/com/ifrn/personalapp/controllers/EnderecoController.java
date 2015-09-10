@@ -12,12 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.ifrn.personalapp.models.Endereco;
 import br.com.ifrn.personalapp.service.EnderecoService;
+import br.com.ifrn.personalapp.service.PessoaService;
 
 @RestController
 public class EnderecoController {
 
 	@Autowired
 	EnderecoService enderecoService;
+	
+	@Autowired
+	PessoaService pessoaService;
 
 	@RequestMapping(value = "endereco/criar", method = RequestMethod.GET)
 	public ModelAndView formCriar(@ModelAttribute Endereco endereco) {
@@ -49,6 +53,9 @@ public class EnderecoController {
 		return enderecoService.getById(id);
 	}
 	
-	
+	@RequestMapping(value = "endereco/listar", method = RequestMethod.GET) 
+	public ModelAndView listar() {
+		return new ModelAndView("endereco/listar", "pessoas", pessoaService.pessoasAtivas());
+	}
 
 }

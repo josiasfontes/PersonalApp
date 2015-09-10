@@ -199,7 +199,7 @@
 		<form:label path="mensalidade.valor">Valor da Mensalidade</form:label>
 		<form:hidden path="mensalidade.idMensalidade" value="${pessoa.mensalidade.idMensalidade}"/>
 		<form:input class="form-control" path="mensalidade.valor" value="${pessoa.mensalidade.valor}" />
-		<br />
+		<br/>
 		
 		<form:label path="mensalidade.status">Status</form:label>
 		<form:input class="form-control" path="mensalidade.status" value="${pessoa.mensalidade.status}" />

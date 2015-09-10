@@ -137,25 +137,60 @@
 							<div class="box-body">
 <if test="${!empty pessoas}">
 <form:form role="form">
-<table class="table">
-	<thead>
-		<tr>
-			<th>Id Mensalidade</th>
-			<th>Valor</th>
-			<th>Ultimo Pagamento</th>
-			<th>Data de Vencimanto</th>
-			<th>Status</th>
-		</tr>
-	</thead>
+<table class="table table-bordered">
+	
 	<tbody>
 		<c:forEach items="${pessoas}" var="pessoa">
+			<thead>
 			<tr>
-				<td>${pessoa.mensalidade.idMensalidade}</td>
-				<td>${pessoa.mensalidade.valor}</td>
-				<td>${pessoa.mensalidade.ultimoPagamento}</td>
-				<td>${pessoa.mensalidade.dataVencimento}</td>
-				<td>${pessoa.mensalidade.status}</td>
+			<th width="15%">Nome:</th>
+			<td>${pessoa.nome}</td>
 			</tr>
+			<tr>
+			<th>Id Endereço:</th>
+			<td>${pessoa.endereco.idEndereco}</td>
+			</tr>
+			<tr>
+			<th>CEP:</th>
+			<td>${pessoa.endereco.cep}</td>
+			</tr>
+			<tr>
+			<th>Logradouro:</th>
+			<td>${pessoa.endereco.logradouro}</td>
+			</tr>
+			<tr>
+			<th>Bairro:</th>
+			<td>${pessoa.endereco.bairro}</td>
+			</tr>
+			<tr>
+			<th>Numero:</th>
+			<td>${pessoa.endereco.numero}</td>
+			</tr>
+			<tr>
+			<th>Complemento:</th>
+			<td>${pessoa.endereco.complemento}</td>
+			</tr>
+			<tr>
+			<th>Cidade:</th>
+			<td>${pessoa.endereco.cidade}</td>
+			</tr>
+			<tr>
+			<th>Estado:</th>
+			<td>${pessoa.endereco.estado}</td>
+			</tr>
+			<tr>
+			<th>ID Academia:</th>
+			<td>${pessoa.academia.idAcademia}</td>
+			</tr>
+			<tr>
+			<th>Status:</th>
+			<td>${pessoa.mensalidade.status}</td>
+			</tr>
+			<tr>
+			<th>Valor:</th>
+			<td>${pessoa.mensalidade.valor}</td>
+		</tr>
+	</thead>
 		</c:forEach>
 	</tbody>
 </table>

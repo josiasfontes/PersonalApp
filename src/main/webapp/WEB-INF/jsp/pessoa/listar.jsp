@@ -127,7 +127,7 @@
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>Exercícios Cadastrados</h1>
+				<h1>Pessoas Cadastrados</h1>
 			</section>
 
 			<section class="content">
@@ -147,11 +147,12 @@
 			<th>Idade</th>
 			<th>Email</th>
 			<th>Telefone</th>
-			<th>Data</th>
-			<th>Id Academia</th>
+			<th>Data Cadastro</th>
+			<!-- <th>Id Academia</th>
 			<th>Id Endereco</th>
 			<th>Status Mensalidade</th>
-			<th>Valor Mensalidade</th>
+			<th>Valor Mensalidade</th> -->
+			<th>Mais Informações</th>
 			<th>Gerenciar Aluno</th>
 			<th>Editar</th>
 			<th>Remover</th>
@@ -168,10 +169,13 @@
 				<td>${pessoa.email}</td>
 				<td>${pessoa.telefone}</td>
 				<td>${pessoa.dataCadastro}</td>
-				<td>${pessoa.academia.idAcademia}</td>
+				<%-- <td>${pessoa.academia.idAcademia}</td>
 				<td>${pessoa.endereco.idEndereco}</td>
 				<td>${pessoa.mensalidade.status}</td>
-				<td>${pessoa.mensalidade.valor}</td>
+				<td>${pessoa.mensalidade.valor}</td> --%>
+				<td><a href="/endereco/listar/">
+						<i class="btn btn-primary">Mais informações</i>
+				</a></td>
 				<td><a
 					href="${pageContext.request.contextPath}/treino/criar/">
 						<i class="btn btn-primary">Gerenciar Aluno</i>

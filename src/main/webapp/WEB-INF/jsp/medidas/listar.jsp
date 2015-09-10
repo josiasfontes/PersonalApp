@@ -127,7 +127,7 @@
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
-				<h1>Exercícios Cadastrados</h1>
+				<h1>Medidas</h1>
 			</section>
 
 			<section class="content">

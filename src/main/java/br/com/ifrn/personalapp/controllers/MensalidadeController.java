@@ -12,12 +12,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.ifrn.personalapp.models.Mensalidade;
 import br.com.ifrn.personalapp.service.MensalidadeService;
+import br.com.ifrn.personalapp.service.PessoaService;
 
 @RestController
 public class MensalidadeController {
 
 	@Autowired
 	MensalidadeService mensalidadeService;
+	
+	@Autowired
+	PessoaService pessoaService;
 
 	@RequestMapping(value = "mensalidade/criar", method = RequestMethod.GET)
 	public ModelAndView formCriar(@ModelAttribute Mensalidade mensalidade) {
@@ -53,7 +57,7 @@ public class MensalidadeController {
 	
 	@RequestMapping(value = "mensalidade/listar", method = RequestMethod.GET) 
 	public ModelAndView listar() {
-		return new ModelAndView("mensalidade/listar", "mensalidades", mensalidadeService.mensalidades());
+		return new ModelAndView("mensalidade/listar", "pessoas", pessoaService.pessoasAtivas());
 	}
 
 }
